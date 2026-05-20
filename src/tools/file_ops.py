@@ -1,9 +1,13 @@
 import os
+from zipfile import ZipFile
+import xml.etree.ElementTree as ET
 from langchain_core.tools import tool
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
 from rich.console import Console
 
 console = Console()
+
+WORD_NAMESPACE = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 
 
 def convert_doc_to_docx(doc_path: str) -> str:
@@ -37,6 +41,63 @@ def convert_doc_to_docx(doc_path: str) -> str:
         except Exception:
             pass
         raise e
+
+
+def extract_docx_text_fallback(docx_path: str) -> str:
+    """
+    Extract text from a DOCX file without docx2txt.
+    This uses the OOXML document XML directly as a dependency-light fallback.
+    """
+    paragraphs = []
+
+    with ZipFile(docx_path) as docx_zip:
+        document_xml = docx_zip.read("word/document.xml")
+
+    root = ET.fromstring(document_xml)
+
+    for paragraph in root.findall(".//w:p", WORD_NAMESPACE):
+        fragments = []
+
+        for node in paragraph.iter():
+            tag = node.tag.rsplit("}", 1)[-1]
+            if tag == "t" and node.text:
+                fragments.append(node.text)
+            elif tag == "tab":
+                fragments.append("\t")
+            elif tag in {"br", "cr"}:
+                fragments.append("\n")
+
+        paragraph_text = "".join(fragments).strip()
+        if paragraph_text:
+            paragraphs.append(paragraph_text)
+
+    return "\n".join(paragraphs)
+
+
+def load_docx_content(docx_path: str) -> str:
+    """
+    Load DOCX content with Docx2txtLoader when available.
+    Falls back to direct OOXML extraction when docx2txt is unavailable.
+    """
+    try:
+        loader = Docx2txtLoader(docx_path)
+        docs = loader.load()
+        return "\n".join([doc.page_content for doc in docs])
+    except ModuleNotFoundError as exc:
+        if exc.name != "docx2txt":
+            raise
+        console.print("[yellow][Extractor Agent] docx2txt is not installed. Falling back to built-in DOCX extraction.[/yellow]")
+        return extract_docx_text_fallback(docx_path)
+    except ImportError as exc:
+        if "docx2txt" not in str(exc).lower():
+            raise
+        console.print("[yellow][Extractor Agent] docx2txt is not installed. Falling back to built-in DOCX extraction.[/yellow]")
+        return extract_docx_text_fallback(docx_path)
+    except Exception as exc:
+        console.print(
+            f"[yellow][Extractor Agent] Docx2txtLoader failed ({exc}). Falling back to built-in DOCX extraction.[/yellow]"
+        )
+        return extract_docx_text_fallback(docx_path)
 
 
 @tool
@@ -86,16 +147,12 @@ def read_resume_tool(directory: str) -> str:
             pages = loader.load()
             content = "\n".join([page.page_content for page in pages])
         elif file_ext == ".docx":
-            loader = Docx2txtLoader(file_to_process)
-            docs = loader.load()
-            content = "\n".join([doc.page_content for doc in docs])
+            content = load_docx_content(file_to_process)
         elif file_ext == ".doc":
             console.print("[yellow][Extractor Agent] Legacy .doc file detected. Attempting automatic conversion to .docx...[/yellow]")
             try:
                 temp_docx = convert_doc_to_docx(file_to_process)
-                loader = Docx2txtLoader(temp_docx)
-                docs = loader.load()
-                content = "\n".join([doc.page_content for doc in docs])
+                content = load_docx_content(temp_docx)
 
                 try:
                     os.remove(temp_docx)

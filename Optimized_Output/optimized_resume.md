@@ -1,107 +1,96 @@
-# 求职简历
+# Professional Resume
 
-## 个人信息
-姓名：李白
-性别：男性
-年龄：29
-电话：1871***4539
-邮箱：wl1548**9795@163.com
-学历：本科
-求职意向：python大模型应用开发工程师
-现居地：北京朝阳
-薪资待遇：面议
-是否离职：已离职
-工作年限：6年
+## Personal Information
+Name: Li Bai
+Gender: Male
+Age: 29
+Phone: 1871-000-4539
+Email: wl1548example@163.com
+Degree: Bachelor's Degree
+Target Role: Python Backend Engineer
+Current Location: Chaoyang District, Beijing
+Hometown: Hanzhong, Shaanxi
+Salary Expectation: Negotiable
+Open to Work: Yes
+Years of Experience: 6
 
-## 专业技能
--熟练掌握Python编程语言，具备扎实的面向对象编程和设计模式基础，熟悉并发编程。
--精通大模型应用开发技术栈，包括LangChain框架应用、RAG系统设计与实现、Prompt Engineering、向量数据库应用与优化。
--熟悉大模型微调及LLM Agents、Multi-Agent Systems的开发与部署。
--熟练掌握FastAPI、Django/DRF、Flask等Web框架进行后端API开发，遵循RESTful架构风格。
--具备丰富的数据库设计与开发经验，熟悉MySQL、PostgreSQL、MongoDB、Redis等数据库，了解其体系架构、优化及缓存技术。
--熟悉容器化与云原生技术，包括Docker容器化部署及Kubernetes集群环境下的应用部署与管理。
--熟悉Linux操作系统及Shell脚本编写，具备在Linux环境下进行软件部署、运维和性能调优的能力。
--熟悉消息中间件RabbitMQ的基本原理与常用操作。
--熟练使用Git进行版本控制和团队协作，具备解决代码冲突的能力。
--具备良好的系统性能测试、压测及稳定性测试经验，能够设计并执行自动化测试脚本。
--具备自动化运维与部署能力，熟悉自动化脚本开发及流程自动化平台构建。
+## Professional Skills
+- Proficient in Python backend development with 6 years of industry experience
+- Expert in web framework development using Django, Flask, and FastAPI
+- Skilled in designing robust RESTful APIs and microservices architectures
+- Proficient in database design and optimization for MySQL and PostgreSQL
+- Experienced with caching mechanisms and message brokers including Redis and Celery
+- Proficient in containerized application deployment with Docker and Kubernetes
+- Strong command of Linux environments and infrastructure automation
+- Experienced in version control management and collaboration workflows using Git
+- Proficient in CI/CD pipeline implementation and continuous integration practices
+- Knowledgeable in web server configuration and reverse proxy setup with Nginx
+- Capable of developing LLM integrations, RAG pipelines, and vector database operations
+- Skilled in creating testing scripts and performing load and stability analysis
 
-## 技能证书
-计算机二级证书| 2017 |中国计算机研究机构
-普通话证书| 2017 |中国计算机研究机构
+## Certifications
+National Computer Rank Examination Level 2 | 2017 | Official Examination Authority
+Mandarin Certificate | 2017 | Official Examination Authority
 
-## 职业经历
-大模型应用研发|感易智能科技有限公司| 2024.10 -至今
-Python研发|北京新纽科技有限公司| 2022.08 - 2024.07
-Python研发|北京美信时代科技有限公司| 2020.08 - 2022.06
-Python研发|中软国际有限公司| 2018.05 - 2020.06
+## Work Experience
+LLM Application R&D Engineer | Ganyi Intelligent Technology Co., Ltd. | 10/2024 - Present
+Python Developer | Beijing Xinniu Technology Co., Ltd. | 08/2022 - 07/2024
+Python Developer | Beijing Meixin Times Technology Co., Ltd. | 08/2020 - 06/2022
+Python Developer | Chinasoft International Co., Ltd. | 05/2018 - 06/2020
 
-## 教育经历
-2013.09 - 2017.06 |华北理工大学|金属材料工程|本科
+## Education
+09/2013 - 06/2017 | North China University of Science and Technology | Metal Material Engineering | Bachelor's Degree
 
-## 项目经验
-### 项目一：RAG智能客服系统
-项目描述：主导开发了一个基于检索增强生成（RAG）架构的企业级智能客服系统，旨在通过整合外部知识库与大语言模型（LLM），为金融、政务等场景提供高准确率、低延迟的智能问答服务。项目核心解决了传统LLM的幻觉与知识滞后问题，实现了从数据接入、向量化检索到生成式回答的全链路自动化。
-技术栈：Python, FastAPI, LangChain, Elasticsearch, OpenAI/GPT API, Sentence Transformers, Docker, Kubernetes, Prometheus, Grafana
-职责：
-1.负责知识库全生命周期管理，包括多源异构文档（PDF、Word、HTML）的自动化解析、清洗、文本分块，并利用Sentence Transformers模型进行向量化，构建并维护了亿级向量的高性能检索索引。
-2.设计并实现了大规模历史数据（400万+ QA对）的自动化评估流水线，通过并行计算框架对问答对的准确率、召回率、响应时间等核心指标进行批量验证与统计分析，为模型迭代提供数据依据。
-3.主导系统性能压测与调优，设计测试脚本，对GPU资源分配、向量召回数量、并发请求数等关键参数进行压力测试与48小时稳定性测试，输出性能基准报告，确定最优部署配置。
-4.负责RAG系统从测试到生产环境的容器化（Docker）与云原生（Kubernetes）部署，编写CI/CD流水线，实现服务的自动化发布、扩缩容与监控告警。
-项目亮点：
-1.设计了可扩展的数据接入与知识库更新系统，支持定时与实时两种模式，实现了新数据源的自动接入、向量化与索引更新，保障了知识库的时效性与准确性。
-2.针对400万级历史数据验证任务，创新性地设计了具备断点续跑和全链路溯源能力的批处理框架，通过唯一任务ID关联每一条QA对的处理日志，极大提升了大规模任务处理的可靠性与可维护性。
-3.基于日常跑批积累的指标数据，持续优化RAG系统效果，实施了包括用户查询意图识别、查询扩展（相似问生成）、知识库答案去冗余以及检索结果重排序（Re-ranking）等多种策略，将问答准确率提升了15%以上。
-### 项目二：RPA流程自动化平台
-项目描述：参与设计并开发了一个跨平台的机器人流程自动化（RPA）平台，包含流程设计器、执行客户端与调度中心。该平台通过模拟用户界面操作，自动化处理邮件收发、Excel/Word文档操作、数据库查询等重复性办公任务，显著提升企业运营效率。
-技术栈：Python, Flask, SQLite, aiohttp, APScheduler, UOS/Windows
-职责：
-1.负责流程设计器前端交互与后端逻辑开发，实现图形化拖拽编排自动化流程。
-2.开发核心流程组件库，包括邮件处理、Office文档解析、二维表识别、数据库连接器等通用组件，封装成可复用的SDK。
-3.负责有人值守与无人值守客户端的核心功能模块开发，包括流程触发、执行监控与异常处理。
-4.实现客户端自动升级模块，确保终端机器人版本的统一管理与平滑升级。
-项目亮点：
-1.利用aiohttp实现了组件包与大文件的分片上传与断点续传功能，通过异步IO处理支持高并发传输，保障了在大规模部署时的分发效率与稳定性。
-2.基于APScheduler开发了分布式任务调度引擎，支持Cron表达式与一次性定时任务，实现了对成千上万流程机器人的集中调度、状态监控与任务管理。
-### 项目三：运维监控平台
-项目描述：设计并开发了一个分布式、可扩展的IT运维监控平台，用于对服务器、网络设备、数据库及中间件的性能指标进行实时采集、存储、分析与可视化。系统支持自定义监控项、多级告警策略与自动化故障排查，保障了业务系统的稳定运行。
-技术栈：Python, Django REST Framework, MySQL, RabbitMQ, Celery, Docker, Linux/Windows
-职责：
-1.负责设备报表模块开发，实现监控数据的聚合分析与多维度（时间、设备、服务）可视化报表导出。
-2.开发平台自身健康度监测功能，对监控系统的核心服务（如消息队列、数据库、采集器）进行实时自检与告警。
-3.参与生产环境故障排查，定位并解决数据采集延迟、存储异常等性能瓶颈问题。
-项目亮点：
-1.实现了一键导出设备性能数据并自动生成包含柱状图、曲线图的专业报告，支持PDF/Excel格式，提升了运维汇报效率。
-2.构建了完善的自监控体系，实时追踪本机及分布式节点的网络连接数、磁盘IO、CPU负载、消息队列堆积等数十项关键指标，确保监控系统自身高可用。
-3.采用“采集-汇聚-分析”三层分布式架构，利用RabbitMQ进行解耦，通过独立的分析程序对原始采集数据进行过滤、聚合后入库，有效降低了数据库压力，提升了复杂查询的响应速度。
-### 项目四：云智慧融合版自动化部署脚本
-项目描述：主导开发了一套自动化部署与转换脚本，用于将标准产品快速转换为定制化的“云智慧融合版”。该工具集成了服务安装、配置管理、数据迁移与反向代理设置等全流程，将原本需要数小时的人工部署工作压缩至分钟级，实现了部署的标准化与无人化。
-技术栈：Python, Shell, ConfigParser, threading, multiprocessing, CentOS
-职责：
-1.负责核心转换脚本的架构设计与代码开发，整合多个离散的部署步骤为一个原子化操作流程。
-2.负责脚本的全链路测试，包括单元测试、集成测试及上线后的运行维护与迭代优化。
-项目亮点：
-1.创新性地使用装饰器对关键配置文件进行修改校验，在脚本执行前后进行MD5比对，确保系统配置的准确性与可回滚性。
-2.利用ConfigParser模块封装了统一的配置管理类，提供了对INI格式配置文件的增删改查高级接口，提升了代码的可读性与可维护性。
-3.通过结合threading与multiprocessing模块，实现对前端静态文件路由的大规模并行查找与替换，将文件处理效率提升了数倍。
-### 项目五：智慧农业平台
-项目描述：参与开发了一个面向现代农业的综合性SaaS平台，连接农户、农业专家与企业。平台提供土壤数据分析、种植指导、农产品溯源与电商交易等功能，利用物联网与大数据技术助力农业数字化转型。
-技术栈：Python, Django REST Framework, PostgreSQL, MongoDB, Docker, Linux/Windows
-职责：
-1.负责用户中心模块开发，包括多角色（农户、专家、企业）注册登录、个人资料管理与田地唯一标识码生成系统。
-2.开发基于地图的可视化功能模块，实现农场、传感器等节点的动态配置与位置信息展示。
-项目亮点：
-1.利用MongoDB的灵活Schema特性，设计并实现了地图节点的动态化配置存储方案，支持前端无需发版即可动态增删改地图元素与关联业务数据。
-2.设计并实现了复杂的多角色注册与权限体系，通过策略模式优雅地处理了农户、科技特派员、企业专家等不同角色在注册流程与界面功能上的差异化需求。
-### 项目六：供应链金融平台
-项目描述：参与开发了一个服务于核心企业及其上下游中小微企业的供应链金融平台。平台基于真实贸易背景，整合资金流、信息流与物流，提供应收账款融资、信用评估等服务，旨在降低融资风险与成本。
-技术栈：Python, FastAPI, PostgreSQL, Redis, Celery, Docker, Linux/Windows
-职责：
-1.负责系统通知中心模块开发，包括全站公告发布与用户私信、业务处理通知等实时消息功能。
-2.参与基于工作流引擎的业务流程开发，实现融资申请、审批、放款等环节的状态驱动与自动化流转。
-项目亮点：
-1.将平台公告与实时消息模块高度抽象，封装成独立的、跨平台的Python第三方中间件包。该包提供了统一的API接口，支持多种消息类型（站内信、邮件、短信）与推送策略，已被公司内部多个项目复用，降低了开发成本。
+## Project Experience
+### RAG Intelligent Customer Service System
+Project Description: A retrieval augmented generation customer service QA system combining external knowledge bases and LLMs to answer user queries.
+Tech Stack: Python, FastAPI, LangChain, Elasticsearch, Kubernetes
+Responsibilities:
+1. Collected, cleaned, and standardized raw documents for ingestion into the knowledge base.
+2. Split text, created embeddings, and stored vectors to enable semantic search capabilities.
+3. Ran batch jobs on millions of historical QA records to evaluate accuracy, recall, and response time.
+4. Wrote load testing and stability testing scripts to validate system performance.
+Highlights:
+1. Built a data access system supporting different knowledge base types.
+2. Added resumable processing for very large batch tasks to prevent failure.
+3. Improved QA accuracy with intent recognition, similar questions matching, and reranking.
+### RPA Workflow Automation Platform
+Project Description: A platform utilizing software robots to automate repeated business operations across various applications.
+Tech Stack: Python, Flask, SQLite, Docker, Linux
+Responsibilities:
+1. Developed modules for the designer, attended client, and unattended client interfaces.
+2. Built reusable workflow components for email, Word, Excel, table, and database operations.
+3. Managed client upgrade features and ensured backward compatibility during updates.
+4. Utilized asynchronous libraries for efficient chunk upload and download operations.
+Highlights:
+1. Implemented scheduled robot task management using APScheduler.
+2. Created reusable workflow components to reduce development time for new automations.
+3. Supported unattended execution modes for high-volume background processing.
+### Operations Monitoring Platform
+Project Description: A system monitoring network devices, servers, storage, and security devices to display collected metrics for users.
+Tech Stack: Python, Django REST Framework, MySQL, RabbitMQ, Linux
+Responsibilities:
+1. Developed device report modules and self-monitoring functions for system health.
+2. Investigated and fixed production problems to maintain high availability.
+3. Supported distributed data collection and second-stage filtering before storage.
+4. Implemented host-level monitoring for CPU, disk, connections, and MQ backlog indicators.
+Highlights:
+1. Added one-click export of monitoring metrics with visual charts.
+2. Enabled real-time visibility into server and network device status.
+3. Optimized data ingestion pipelines to handle high-frequency monitoring data.
+### Cloud Product Integration Deployment Script
+Project Description: A script project handling conversion between standard products and cloud-integrated versions including installation and configuration.
+Tech Stack: Python, MySQL, Linux, Git
+Responsibilities:
+1. Developed conversion scripts for installation, reverse proxy setup, and CMDB data push.
+2. Performed self-testing, deployment, maintenance, and optimization of automation tools.
+3. Used decorators to check whether files were changed before applying updates.
+4. Wrapped configparser operations for centralized configuration management.
+Highlights:
+1. Automated service start and stop procedures during cloud integration.
+2. Used threading and multiprocessing to replace frontend routes in batches.
+3. Streamlined the deployment process reducing manual intervention requirements.
 
-## 自我评价
-我是一名拥有6年Python开发经验的工程师，专注于大模型应用开发领域。我精通LangChain、RAG系统、Prompt Engineering等大模型应用技术栈，并具备从FastAPI后端开发、数据库设计到Docker/Kubernetes云原生部署的全栈能力。在过往项目中，我主导了亿级向量RAG客服系统的研发与性能调优，并积累了丰富的自动化运维与高并发系统设计经验。我热衷于探索AI技术解决实际业务问题的可能性，具备强烈的责任心与出色的跨团队协作能力，追求代码质量与系统稳定性。我期待加入一个技术驱动的团队，将我的技术积累与工程化思维应用于更具挑战性的大模型产品开发中，共同推动AI应用的落地与创新。
+## Professional Summary
+Results-driven Python Backend Engineer with six years of comprehensive industry experience specializing in building scalable web applications and microservices architectures. Proficient in core frameworks including Django, Flask, and FastAPI, with deep expertise in designing robust RESTful APIs and optimizing database performance using MySQL and PostgreSQL. Skilled in leveraging caching mechanisms like Redis and message brokers such as Celery to ensure high availability and system efficiency. Recently expanded technical capabilities into artificial intelligence by developing LLM integrations and Retrieval Augmented Generation pipelines using vector databases and Kubernetes. Strong background in infrastructure automation, containerized deployment with Docker, and CI/CD pipeline implementation within Linux environments. Proven track record at leading technology firms managing complex projects ranging from intelligent customer service systems to RPA workflow automation platforms, successfully improving QA accuracy and system response times across multiple enterprise deployments. Demonstrates a meticulous approach to software quality through rigorous load testing, stability analysis, and version control management using Git while maintaining strict adherence to coding standards. Committed to writing clean code, solving critical production issues, and streamlining deployment processes to reduce manual intervention. Eager to leverage extensive backend development knowledge and emerging AI expertise to drive innovation and deliver high-performance solutions as a Python Backend Engineer within a dynamic team environment.
 

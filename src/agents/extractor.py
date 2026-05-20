@@ -20,7 +20,9 @@ def extractor_agent(state: AgentState):
 
     pdfs = glob.glob(os.path.join(data_dir, "*.pdf"))
     docs = glob.glob(os.path.join(data_dir, "*.docx"))
-    files = pdfs + docs
+    legacy_docs = glob.glob(os.path.join(data_dir, "*.doc"))
+    files = pdfs + docs + legacy_docs
+    files.sort(key=os.path.getmtime, reverse=True)
 
     file_ext = ""
     if files:

@@ -1,7 +1,1 @@
-您好，我是李白，一名拥有6年Python开发经验的工程师。
-
-我的职业生涯始于后端开发，在多家科技公司积累了丰富的项目经验。近两年，我专注于大模型应用开发领域，主导并参与了多个核心项目，包括一个处理亿级向量的RAG智能客服系统。
-
-我精通LangChain、RAG系统、Prompt Engineering、向量数据库、大模型微调及LLM Agents/Multi-Agent Systems的开发。同时，我具备扎实的Python后端开发能力，熟练掌握FastAPI等框架，并拥有Docker、Kubernetes云原生部署的实战经验。
-
-我热衷于探索AI技术解决复杂业务问题的可能性，享受将前沿技术工程化落地的过程。期待能有机会加入贵团队，共同推动大模型应用的创新与发展。
+Hello, my name is Li Bai. I am a dedicated Python Backend Engineer with six years of comprehensive industry experience. Throughout my career, I have specialized in building scalable web applications and robust microservices architectures in dynamic teams. My core technical strengths lie in developing high-performance backends using Python frameworks such as Django, Flask, and FastAPI. I possess expertise in database design for MySQL and PostgreSQL, plus caching mechanisms like Redis and message brokers including Celery. Additionally, I am proficient in containerized deployment with Docker and Kubernetes for infrastructure automation on Linux. I have a strong command of Git, CI/CD pipelines, and reverse proxies with Nginx. Recently, I expanded my capabilities into AI by developing LLM integrations and RAG pipelines. I am skilled in designing robust RESTful APIs and managing complex projects ranging from intelligent customer service systems to RPA platforms. I have successfully improved QA accuracy and system response times across multiple enterprise deployments. Committed to clean code and system stability, I excel at load testing and production stability. I am eager to leverage my backend and emerging AI expertise to drive innovation and deliver high-performance solutions. Thank you; I look forward to discussing my contribution.
