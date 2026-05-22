@@ -1,4 +1,4 @@
-# Multi-Agent Resume Optimization and Interview Prep System
+# ResumePilot AI - Multi-Agent Resume Optimization and Interview Prep System
 
 This project is a command-line resume workflow built with **LangGraph** and **LangChain**. It takes a raw resume file from the local `data/` directory, routes the request to a role-specific technology stack profile, generates an improved English resume section by section, renders the output to PDF and optionally DOCX, and then creates interview-preparation materials such as a self-introduction and interview questions.
 
